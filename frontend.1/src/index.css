@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  background-image: url(/bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  background-image: url(/sidebar_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.long-sidebar {
+  background-image: url(/long_sidebar.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.check-box label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 7px;
+  background: transparent;
+  top: 3px;
+  left: 2px;
+  border: 3px solid #a2ff93;
+  border-top: none;
+  border-right: none;
+
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.check-box input[type="checkbox"]:checked + label:after {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.formBackground {
+  background: linear-gradient(
+    89.03deg,
+    rgba(27, 1, 101, 0.4) 50%,
+    rgba(27, 1, 101, 0.4) 51.38%,
+    rgba(71, 51, 130, 0.4) 116.25%
+  );
+  box-shadow: 10px 10px 20px rgba(17, 1, 90, 0.8);
+  backdrop-filter: blur(2px);
+  border-radius: 24px;
+}
+
+.light-violet {
+  background: linear-gradient(90deg, #473382 50%, rgba(71, 51, 130, 0) 109.64%);
+}
+
+.analyse-btn {
+  background: linear-gradient(
+    89.03deg,
+    #1b0165 50%,
+    #1b0165 51.38%,
+    #473382 116.25%
+  );
+}
+
+.loader-gradient {
+  background: linear-gradient(
+    105.4deg,
+    #1b0165 25.09%,
+    #473382 62.71%,
+    #a2ff93 100.33%
+  );
+}
+
+/* th:nth-child(1) {
+  border-top-left-radius: 5px;
+}
+
+th:nth-last-child(1) {
+  border-top-right-radius: 5px;
+} */
+
+td,
+th {
+  /* border: 1px solid #473382; */
+  padding: 20px;
+}
+
+td {
+  text-align: center;
+}

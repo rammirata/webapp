@@ -1,0 +1,35 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination > li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.pagination > li > a {
+  display: flex;
+  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d2d6dc;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pagination__link--active {
+  background-color: #1b0165 !important;
+  border-radius: 12px;
+  color: #fff;
+  border: none !important;
+}
+
+.pagination > .disabled > a {
+  color: #a0aec0;
+  pointer-events: none;
+  background-color: #e2e8f0;
+  border-color: #d2d6dc;
+}

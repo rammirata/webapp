@@ -1,0 +1,30 @@
+# dependency folder
+node_modules/
+
+# cred file
+nodemon.json
+
+# VS todo
+Todo
+.vscode/*
+
+# bugs
+bugLog
+
+# keys
+keys/
+
+#logs
+log.txt
+output.csv
+lambda_errors.txt
+
+#aws ssh files
+aws_connect/
+
+# other 
+commands.txt
+.python-version
+.env
+env/*
+*temp.js

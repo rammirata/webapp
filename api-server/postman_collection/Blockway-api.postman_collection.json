@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "8d64e02d-c3c4-440a-8bed-46bfa87f887f",
+		"name": "Blockway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8891696"
+	},
+	"item": [
+		{
+			"name": "waitlist",
+			"item": [
+				{
+					"name": "Get waitlist",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.blockway.tech/waitlist",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blockway",
+								"tech"
+							],
+							"path": [
+								"waitlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "activate account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.blockway.tech/user/activate/62d04e428e07c7cee4b37158",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blockway",
+								"tech"
+							],
+							"path": [
+								"user",
+								"activate",
+								"62d04e428e07c7cee4b37158"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.blockway.tech/user",
+							"protocol": "https",
+							"host": [
+								"api",
+								"blockway",
+								"tech"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "requestAddress",
+			"item": [
+				{
+					"name": "Make Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addresses\": [\"0x48b742b9d935fdaeade1a48cd7c5e4aec4360b0c\"],\r\n    \"fuid\": \"pmTQqQ4dfmbXkKFptJl0Jhw5wCV2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/request-analytics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"request-analytics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get requests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/request-analytics?fuid=8vm0cx7QkBRoiVLpMVdggL6vmRN2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"request-analytics"
+							],
+							"query": [
+								{
+									"key": "fuid",
+									"value": "8vm0cx7QkBRoiVLpMVdggL6vmRN2"
+								},
+								{
+									"key": "userId",
+									"value": "62ffb7ed8817b9b46ba9a824",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Analytics",
+			"item": [
+				{
+					"name": "get analytics",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_url",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "deployed_url",
+			"value": "https://api.blockway.tech",
+			"type": "string"
+		}
+	]
+}
